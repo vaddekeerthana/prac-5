@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MetaWork</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    header {
+        background-color: #123456;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #222;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+    }
+
+    nav a:hover {
+        background-color: #008cba;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    section {
+        flex: 2;
+        min-width: 250px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    aside {
+        flex: 1;
+        min-width: 200px;
+        background-color: #dceeff;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        color: #123456;
+    }
+
+    #homeMenu {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #123456;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 16px;
+    }
+
+    #serviceInfo {
+        margin-top: 15px;
+        color: #123456;
+        line-height: 1.6;
+    }
+
+    footer {
+        background-color: #123456;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            width: 100%;
+            text-align: center;
+        }
+
+        main {
+            flex-direction: column;
+        }
+    }
+</style>
+
+</head><body><header>
+    <h1>MetaWork</h1>
+    <p>Metaverse Experiences for Business and Education</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main id="home">
+
+    <section id="about">
+
+        <h2>About MetaWork</h2>
+
+        <p>
+            MetaWork provides metaverse experiences for business
+            and education. It uses virtual environments and
+            interactive digital spaces to improve learning,
+            communication, collaboration, and training.
+        </p>
+
+        <h2 id="services">Our Services</h2>
+
+        <ul>
+            <li>Virtual Classrooms</li>
+            <li>Virtual Business Meetings</li>
+            <li>3D Learning Environments</li>
+            <li>Employee Training</li>
+        </ul>
+
+    </section>
+
+    <aside>
+        <h2>Benefits</h2>
+
+        <p>Interactive learning experiences.</p>
+
+        <p>Virtual collaboration from anywhere.</p>
+
+        <p>Improved communication.</p>
+
+        <p>Creative digital environments.</p>
+    </aside>
+
+</main>
+
+<main>
+
+    <section>
+
+        <h2>Explore Metaverse Experiences</h2>
+
+        <label for="homeMenu">
+            Choose an Experience:
+        </label>
+
+        <select id="homeMenu" onchange="showService()">
+
+            <option value="">-- Select an Option --</option>
+
+            <option value="education">
+                Virtual Education
+            </option>
+
+            <option value="business">
+                Virtual Business
+            </option>
+
+            <option value="meeting">
+                Virtual Meetings
+            </option>
+
+            <option value="training">
+                Virtual Training
+            </option>
+
+        </select>
+
+        <p id="serviceInfo"></p>
+
+        <h2>Metaverse Applications</h2>
+
+        <ul>
+            <li>Online Education</li>
+            <li>Business Collaboration</li>
+            <li>Virtual Conferences</li>
+            <li>Digital Training Programs</li>
+        </ul>
+
+    </section>
+
+    <aside>
+
+        <h2>Why MetaWork?</h2>
+
+        <p>Learn through virtual classrooms.</p>
+
+        <p>Conduct meetings in digital spaces.</p>
+
+        <p>Explore interactive 3D environments.</p>
+
+        <p>Connect people around the world.</p>
+
+    </aside>
+
+</main>
+
+<script>
+
+    function showService() {
+
+        const service =
+            document.getElementById("homeMenu").value;
+
+        const info =
+            document.getElementById("serviceInfo");
+
+        const services = {
+
+            education:
+                "Virtual Education provides interactive classrooms and digital learning experiences for students.",
+
+            business:
+                "Virtual Business helps companies collaborate, present products, and connect with customers in digital environments.",
+
+            meeting:
+                "Virtual Meetings allow employees and teams to communicate and collaborate from different locations.",
+
+            training:
+                "Virtual Training helps students and employees develop skills through immersive digital environments."
+
+        };
+
+        info.textContent = services[service] || "";
+
+    }
+
+</script>
+
+<footer id="contact">
+
+    <h3>Contact MetaWork</h3>
+
+    <p>Email: info@metawork.example</p>
+
+    <p>&copy; 2026 MetaWork. All Rights Reserved.</p>
+
+</footer>
+
+</body></html>
